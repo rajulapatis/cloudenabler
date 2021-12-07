@@ -1,6 +1,0 @@
-carid = "change-me"
-costcenter = "change-me"
-confidentiality = "internal"
-assignmentgroup = "change-me"
-additionaltagkey1 = "key1_value"
-additionaltagkey2 = "key2_value"
