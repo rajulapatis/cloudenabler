@@ -1,6 +1,0 @@
-carId = "change-me"
-costCenter = "change-me"
-confidentiality = "internal"
-assignmentGroup = "change-me"
-additionalTagKey1 = "key1_value"
-additionalTagKey2 = "key2_value"
