@@ -1,6 +1,5 @@
 package com.usbank.cloudEnable.controller;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,14 +16,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.moandjiezana.toml.TomlWriter;
-import com.usbank.cloudEnable.model.Application;
 import com.usbank.cloudEnable.repository.ApplicationRepository;
 
 
 @RestController
 public class CloudEnableController {
-	@Autowired
-	private ApplicationRepository apprepo;
+//	@Autowired
+//	private ApplicationRepository apprepo;
 	//private ConnectToPG connection;
 
 	@GetMapping("/greeting") //change to post mapping.
@@ -33,39 +31,39 @@ public class CloudEnableController {
 		
 		JSONParser parser = new JSONParser();
 
-        try {     
-            Object obj = parser.parse(new FileReader("/Users/axgarla/CloudTools/file.json"));
-
-            JSONObject jsonObject =  (JSONObject) obj;
-
-            
-            System.out.println("jsonObject:"+jsonObject);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-       // System.out.println("apprepo.findAll();"+apprepo.findAll());
+//        try {
+//            Object obj = parser.parse(new FileReader("/Users/axgarla/CloudTools/file.json"));
+//
+//            JSONObject jsonObject =  (JSONObject) obj;
+//
+//
+//            System.out.println("jsonObject:"+jsonObject);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+      // System.out.println("apprepo.findAll();"+apprepo.findAll());
 		//TomlObject application = new TomlObject();
 		//Application application = new Application();
-	TomlWriter tomlWriter = new TomlWriter();
-		try {
-			File file = new File("/Users/axgarla/CloudTools/filename1.txt");
-			Application appl = apprepo.findAll().get(0);
-			//System.out.println("apprepo.findAll();"+appl);
-			
-			tomlWriter.write(appl,file );
-	
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	//TomlWriter tomlWriter = new TomlWriter();
+//		try {
+//			File file = new File("/Users/axgarla/CloudTools/filename1.txt");
+//			// Application appl = apprepo.findAll().get(0);
+//			//System.out.println("apprepo.findAll();"+appl);
+//
+//			// tomlWriter.write(appl,file );
+//
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		//apprepo.findAll();
 		
 		//connection.getAllCatalogeName();
-		return new ResponseEntity<String>("greeting", HttpStatus.OK);
+		return new ResponseEntity<String>("Hello from Utilities", HttpStatus.OK);
 	}
 
 }
