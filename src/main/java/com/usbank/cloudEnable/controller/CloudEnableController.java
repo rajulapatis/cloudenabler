@@ -63,7 +63,7 @@ public class CloudEnableController {
 		//apprepo.findAll();
 		
 		//connection.getAllCatalogeName();
-		return new ResponseEntity<String>("Hello from Utilities", HttpStatus.OK);
+		return new ResponseEntity<String>("Hello from Utilities - Happy Friday", HttpStatus.OK);
 	}
 
 }
